@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'handle', Sans-Serif;
+  --primary-color: #7925c1;
+  --secondary-color: hsl(272.3,67.8%,85.0%);
+  --accent-color: hsl(272.3,67.8%,65%);
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  min-height: 100vh;
+}
+
+button:disabled {
+  cursor: "not-allowed";
+}
+
+.wrapper {
+  width: min(100% - 2em,550px);
+  border-radius: 7px;
+  background-color: white;
+  padding: 30px 25px 40px;
+  margin: 20px 0;
+  box-shadow: 6px 6px 2px black;
+  overflow: hidden;
+}
+
+.wrapper h3 {
+  color: var(--primary-color);
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.wrapper h3 + p {
+  margin-bottom: 15px;
+}
+
+form {
+  font-size: 1rem;
+}
+
+.wrapper :where(input, select, button) {
+  width: 100%;
+  font-size: clamp(.5rem, 100vw - 1rem, 1em);
+  outline: none;
+  border: none;
+  border-radius: 6px;
+}
+
+.wrapper input:valid {
+  border: 1px solid var(--secondary-color);
+}
+
+.wrapper input {
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+}
+
+.file-options {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.option {
+  width: calc(100% / 2 - 8px);
+}
+
+.option :where(input, .select-menu) {
+  height: 35px;
+  margin-top: 6px;
+  padding: 0 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.option .select-menu select {
+  height: 35px;
+  background: transparent;
+  cursor: pointer;
+}
+
+select option:hover {
+  cursor: pointer;
+  background-color: blueviolet;
+}
+
+.grab-btn {
+  margin-bottom: 20px;
+  padding: 15px 0;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+.wrapper input:valid ~ .grab-btn {
+  opacity: 1;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.preview-wrapper {
+  display: flex;
+}
+
+.preview-wrapper div {
+  width: 100%;
+}
+
+.preview {
+  /* display: flex; */
+  background-color: var(--secondary-color);
+  flex-direction: column;
+  width: 100%;
+  max-height: 0;
+  opacity: 0;
+  z-index: -10;
+  overflow: hidden;
+  -webkit-transition: max-height 1s; 
+  -moz-transition: max-height 1s; 
+  -ms-transition: max-height 1s; 
+  -o-transition: max-height 1s; 
+  transition: max-height 1s ease;
+}
+
+.preview-header * {
+  display: inline;
+  /* vertical-align: middle; */
+}
+
+.preview-wrapper.show .preview {
+  /* display: block; */
+  max-height: 100%;
+  opacity: 1;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.preview .thumb-img {
+  position: relative;
+  aspect-ratio: 16/9;
+  width: 100%;
+  margin: 0 0 20px;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.thumb-img img {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.download-btn {
+  width: 100%;
+  padding: 15px 0;
+  margin-bottom: 10px;
+  color: white;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.download-btn.disabled, .grab-btn.disabled {
+  opacity: .6 !important;
+  cursor: not-allowed !important;
+}
+
+.download-btn:hover {
+  opacity: .6;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  font-family: Monospace;
+  font-size: .8em;
+  color: #797979;
+}
+
+.project-link:link {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+.project-link:hover {
+  color: var(--accent-color);
+}
+
+.project-link:visited {
+  color: var(--primary-color);
+}
+
+a:link {
+  color: #aaa;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+/* .tippy-box {
+  background-color: hsl(272, 68%, 75%);
+  color: hsl(272, 68%, 10%);
+} */
+
+.tippy-content {
+  text-align: center !important;
+}
+
+svg {
+  width: .8rem;
+  height: 100%;
+  margin-left: 2px;
+  cursor: help;
+}
+
+svg#previewHelp {
+  color: var(--primary-color);
+}
+
+svg:focus-visible {
+  outline: auto;
+}
+
+@media screen and (max-width: 375px) {
+  :root {
+    font-size: 14px !important;
+  }
+
+  .grab-btn {
+    padding: 10px 0;
+  }
+
+  .download-btn {
+    padding: 10px 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* :root {
+    font-size: 14px;
+  } */
+  .file-options {
+    margin: 10px 0;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .option {
+    width: 100%;
+    transition: all .5s ease-in-out;
+  }
+}
