@@ -1,52 +1,11 @@
-$font-family_1: "Font Awesome 5 Brands";
-$font-family_2: "Font Awesome 5 Free";
+@charset "utf-8";
 
-/*-- Font Awesome Free 5.15.1 --*/
-@font-face {
-	font-family: "Font Awesome 5 Brands";
-	font-display: swap;
-	font-style: normal;
-	font-weight: 400;
-	font-display: block;
-	src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-brands-400.eot);
-	src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-brands-400.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-brands-400.woff) format("woff"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-brands-400.ttf) format("truetype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-brands-400.svg#fontawesome) format("svg");
-}
-@font-face {
-	font-family: "Font Awesome 5 Free";
-	font-display: swap;
-	font-style: normal;
-	font-weight: 400;
-	font-display: block;
-	src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-regular-400.eot);
-	src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-regular-400.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-regular-400.woff) format("woff"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-regular-400.ttf) format("truetype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-regular-400.svg#fontawesome) format("svg");
-}
-@font-face {
-	font-family: "Font Awesome 5 Free";
-	font-display: swap;
-	font-style: normal;
-	font-weight: 900;
-	font-display: block;
-	src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-solid-900.eot);
-	src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-solid-900.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-solid-900.woff) format("woff"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-solid-900.ttf) format("truetype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/webfonts/fa-solid-900.svg#fontawesome) format("svg");
-}
-/*-- CSS Variables --*/
-.fab {
-	font-family: $font-family_1;
-	font-weight: 400;
-}
-.far {
-	font-family: $font-family_2;
-	font-weight: 400;
-	font-family: $font-family_2;
-}
-.fa {
-	font-family: $font-family_2;
-	font-weight: 900;
-}
-.fas {
-	font-family: $font-family_2;
-	font-weight: 900;
-}
+//
+// VARIABLES
+//
+
+// Colors
+
 html {
 	--body-font: 'Rubik', Arial, sans-serif;
 	--title-font: 'Rubik', Arial, sans-serif;
